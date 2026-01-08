@@ -1,7 +1,7 @@
 import UserDetails from "./UserDetails";
 
 function UserContainer() {
-  const userName = "Anindita";
+  const userName = "Guguli";
 
   return (
     <div className="border border-green-300 rounded-lg p-4">
