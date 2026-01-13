@@ -4,7 +4,7 @@ function Counter() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100">
+    <div className="min-h-screen flex items-center justicd SLfy-center bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100">
       
       <div className="bg-white/80 backdrop-blur-xl p-10 rounded-3xl shadow-2xl w-[340px] text-center transition hover:scale-[1.02]">
         
