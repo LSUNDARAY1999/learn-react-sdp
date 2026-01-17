@@ -1,52 +1,21 @@
-import useFetch from "../hooks/useFetch";
-import useAuth from "../hooks/useAuth";
-
 const HookDemo = () => {
-  const { data, loading, error } = useFetch(
-    "https://jsonplaceholder.typicode.com/users"
-  );
-  const { user, login, logout } = useAuth();
-
   return (
-    <div className="p-6 max-w-xl mx-auto bg-white rounded-xl shadow-md space-y-4">
-      <h1 className="text-2xl font-bold text-center">
+    <div className="mx-auto w-full max-w-xl bg-white p-6 rounded-xl shadow-md">
+      <h1 className="text-3xl font-bold text-center mb-4">
         Custom Hooks Demo
       </h1>
 
-      {/* Auth Section */}
-      <div className="flex justify-center gap-4">
-        {user ? (
-          <>
-            <p className="text-green-600">Welcome, {user.name}</p>
-            <button
-              onClick={logout}
-              className="bg-red-500 text-white px-4 py-1 rounded"
-            >
-              Logout
-            </button>
-          </>
-        ) : (
-          <button
-            onClick={() => login("Lucky")}
-            className="bg-blue-500 text-white px-4 py-1 rounded"
-          >
-            Login
-          </button>
-        )}
-      </div>
+      <button className="block mx-auto mb-4 bg-blue-500 text-white px-4 py-2 rounded">
+        Login
+      </button>
 
-      {/* Fetch Section */}
-      <div>
-        {loading && <p>Loading users...</p>}
-        {error && <p className="text-red-500">{error}</p>}
-        {data && (
-          <ul className="list-disc pl-5">
-            {data.slice(0, 5).map((user) => (
-              <li key={user.id}>{user.name}</li>
-            ))}
-          </ul>
-        )}
-      </div>
+      <ul className="list-disc pl-6">
+        <li>Leanne Graham</li>
+        <li>Ervin Howell</li>
+        <li>Clementine Bauch</li>
+        <li>Patricia Lebsack</li>
+        <li>Chelsey Dietrich</li>
+      </ul>
     </div>
   );
 };

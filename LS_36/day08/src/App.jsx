@@ -1,12 +1,16 @@
 import HookDemo from "./components/HookDemo";
-import "./App.css"
+
 
 function App() {
   return (
-    <div className=" bg-gray-500 ">
+    <div className="min-h-screen flex items-center justify-center w-ful bg-blue-300">
       <HookDemo />
     </div>
   );
 }
 
 export default App;
+
+
+
+
