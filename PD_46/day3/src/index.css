@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1f4037, #99f2c8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  max-width: 900px;
+  padding: 30px;
+}
+
+.app h1 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Cards */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+}
+
+.content {
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+/* Boxes */
+.box {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #e3f2fd;
+}
+
+.child {
+  background: #c8e6c9;
+}
+
+strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 18px;
+}
