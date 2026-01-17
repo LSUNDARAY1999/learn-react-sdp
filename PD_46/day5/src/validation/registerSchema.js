@@ -1,0 +1,20 @@
+import * as yup from "yup";
+
+export const registerSchema = yup.object({
+  name: yup
+    .string()
+    .required("Name is required")
+    .min(3, "Minimum 3 characters"),
+  email: yup
+    .string()
+    .email("Invalid email format")
+    .required("Email is required"),
+  password: yup
+    .string()
+    .required("Password is required")
+    .min(6, "Minimum 6 characters"),
+  confirmPassword: yup
+    .string()
+    .oneOf([yup.ref("password")], "Passwords do not match")
+    .required("Confirm password is required"),
+});
