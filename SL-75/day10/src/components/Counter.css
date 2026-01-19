@@ -1,0 +1,104 @@
+/* 🌈 Background (optional for full page) */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #1a1a2e, #0f0f1a);
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🧊 Glassmorphism Card */
+.counter-card {
+  width: 320px;
+  padding: 30px 25px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.05)
+  );
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✨ Glow Effect */
+.counter-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, #667eea, #764ba2, #00c6ff);
+  opacity: 0.25;
+  z-index: -1;
+  filter: blur(25px);
+}
+
+/* 🔢 Counter Value */
+.counter-card h2 {
+  font-size: 42px;
+  margin: 15px 0;
+  letter-spacing: 2px;
+  animation: pop 0.6s ease;
+}
+
+/* 🟣 Button Group */
+.btn-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+/* 🚀 Buttons */
+button {
+  flex: 1;
+  padding: 12px 0;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #ffffff, #e4e4e4);
+  color: #333;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* ✨ Hover Effect */
+button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* 🟢 Active Click */
+button:active {
+  transform: scale(0.95);
+}
+
+/* 🎯 Button Colors */
+button.increment {
+  background: linear-gradient(135deg, #00f260, #0575e6);
+  color: #fff;
+}
+
+button.decrement {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: #fff;
+}
+
+/* 🔥 Animation */
+@keyframes pop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
