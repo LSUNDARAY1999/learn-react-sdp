@@ -1,24 +1,18 @@
 import { render, screen, fireEvent } from "@testing-library/react";
+import { describe, test, expect } from "vitest";
 import Counter from "./Counter";
 
 describe("Counter Component", () => {
   test("shows initial count as 0", () => {
     render(<Counter />);
-
-    const count = screen.getByTestId("count");
-    expect(count).toHaveTextContent("0");
+    expect(screen.getByTestId("count")).toHaveTextContent("0");
   });
 
-  test("increments count on button click", () => {
+  test("increments count on click", () => {
     render(<Counter />);
-
-    const button = screen.getByRole("button", {
-      name: /increment/i,
-    });
-
-    fireEvent.click(button);
-
-    const count = screen.getByTestId("count");
-    expect(count).toHaveTextContent("1");
+    fireEvent.click(
+      screen.getByRole("button", { name: /increment/i })
+    );
+    expect(screen.getByTestId("count")).toHaveTextContent("1");
   });
 });
