@@ -12,7 +12,7 @@ const Counter = () => {
 
         <p
           data-testid="count"
-          className="text-3xl font-semibold text-blue-600 mb-6"
+          className="text-3xl font-semibold text-green-600 mb-6"
         >
           {count}
         </p>
